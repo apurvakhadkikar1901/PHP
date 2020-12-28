@@ -1,0 +1,185 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid whi;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+}
+.form-wrapper {
+  background-image:  url("employee.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:fixed
+  background-attachment: fixed;
+}
+input[type=submit] {
+  background-color: Red;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: Red;
+}
+input[type=cancel] {
+  background-color: Red;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+input[type=cancel]:hover {
+  background-color: white;
+}
+.container {
+  border-radius: 5px;
+  background-img:employee.jpg;
+  padding: 20px;
+  position :center
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 15px;
+  margin-left: 50px
+}
+
+.col-75 {
+  float: left;
+  width: 30%;
+  margin-top: 15px;
+  margin-left: 25px
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<h2><center>Employee Report</center></h2>
+
+<div class="container">
+  <div class="form-wrapper ">
+  <form action="ex.php" method="post">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Employee ID</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="employee_id" placeholder="Your ID..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+        <label for="lname">Employee Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="employee_name" placeholder="Your Name..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+        <label for="lname">Telephone No</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="telephone" placeholder="Your Telephone..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+        <label for="lname">Email </label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="email" placeholder="Your email.">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+        <label for="lname">Job Tittle</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="job" placeholder="Your Job tittle..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+        <label for="lname">Start Date</label>
+      </div>
+      <div class="col-75">
+        <input type="date" name="start_date">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+        <label for="lname">End Date</label>
+      </div>
+      <div class="col-75">
+        <input type="date" name="end_date">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+        <label for="country">Shift</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="shift">
+          <option value="first">First shift</option>
+          <option value="secound">Secound Shift</option>
+          <option value="third">Third Shift</option>
+        </select>
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+        <label for="subject">Discribtion</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="discribtion" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+	<div class="row">
+	  <div class="col-25">
+      <input  class="submit"name="submit" type="submit" value="submit">
+	  </div>
+    </div>
+  </form>
+</div>
+</div>
+</body>
+</html>
